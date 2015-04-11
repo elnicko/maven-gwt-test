@@ -4,6 +4,6 @@ public class MvngwtApi {
 	
 	public String hello()
 	{
-		return "gwt-client-api-hello-24";
+		return "gwt-client-api-hello-24ee";
 	}
 }
