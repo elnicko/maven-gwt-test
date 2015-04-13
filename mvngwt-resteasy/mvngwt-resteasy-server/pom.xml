@@ -18,7 +18,12 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>mvngwt-resteasy-shared</artifactId>
+      <artifactId>mvngwt-resteasy-server-api-gwt</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>mvngwt-resteasy-server-api-re</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -105,7 +110,7 @@
       <dependencies>
         <dependency>
           <groupId>${project.groupId}</groupId>
-          <artifactId>mvngwt-client</artifactId>
+          <artifactId>mvngwt-resteasy-client</artifactId>
           <version>${project.version}</version>
           <type>war</type>
           <scope>runtime</scope>
