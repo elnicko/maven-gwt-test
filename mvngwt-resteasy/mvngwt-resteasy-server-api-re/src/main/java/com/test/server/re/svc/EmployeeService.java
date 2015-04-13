@@ -48,6 +48,13 @@ public class EmployeeService {
 	}
 
 	@GET
+	@Path("/plain/employees")
+	@Produces("text/plain")
+	public String listEmployeesPlain() {
+		return new ArrayList<Employee>(employees.values()).toString();
+	}
+
+	@GET
 	@Path("/xml/employees")
 	@Produces("application/xml")
 	public List<Employee> listEmployees() {

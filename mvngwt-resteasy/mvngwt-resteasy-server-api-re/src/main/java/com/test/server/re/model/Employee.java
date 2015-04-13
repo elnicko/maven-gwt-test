@@ -37,4 +37,9 @@ public class Employee {
         this.job = job;
     }
     
+    public String toString()
+    {
+    	return new StringBuilder().append("id").append(":").append(employeeId).append(";name:").append(employeeName).toString();
+    }
+    
 }
