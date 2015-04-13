@@ -32,6 +32,7 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>mvngwt-client-api</artifactId>
       <version>${project.version}</version>
+      <type>gwt-lib</type>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
@@ -60,42 +61,4 @@
     </plugins>
   </build>
   
-  <profiles>
-		<profile>
-			<!-- elnicko: add to support CodeServer hot compile for referenced libraries -->
-			<id>env-dev</id>
-			<activation>
-				<property>
-					<name>env</name>
-					<value>dev</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>build-helper-maven-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>add-shared-sources-to-classpath</id>
-								<!-- 
-								<phase>process-classes</phase> 
-								<phase>compile</phase> 
-								-->
-								<phase>generate-sources</phase>
-								<goals>
-									<goal>add-source</goal>
-								</goals>
-								<configuration>
-									<sources>
-										<source>${basedir}/../mvngwt-client-api/src/main/java</source>
-									</sources>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
